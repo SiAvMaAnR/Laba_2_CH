@@ -1,8 +1,11 @@
-﻿namespace Organizations
+﻿using System;
+
+namespace Organizations
 {
     /// <summary>
     /// Завод
     /// </summary>
+    [Serializable]
     public class Factory : Organization
     {
         #region Конструктор
@@ -75,8 +78,6 @@
         /// <returns>Рубли</returns>
         public double GetProfitPerProductUnit() => Income / ProductUnitsPerYear * 1000000;
         #endregion
-
-
 
         /// <summary>
         /// Информация об организации в виде строки

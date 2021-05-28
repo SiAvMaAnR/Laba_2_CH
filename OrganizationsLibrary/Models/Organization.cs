@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Organizations
 {
-
     /// <summary>
     /// Организация
     /// </summary>
+    [Serializable]
+    [XmlInclude(typeof(Factory))]
+    [XmlInclude(typeof(InsuranceCompany))]
+    [XmlInclude(typeof(OilAndGasCompany))]
     public abstract class Organization
     {
         #region Конструктор

@@ -1,8 +1,11 @@
-﻿namespace Organizations
+﻿using System;
+
+namespace Organizations
 {
     /// <summary>
     /// Страховая компания
     /// </summary>
+    [Serializable]
     public class InsuranceCompany : Organization
     {
         #region Конструктор
@@ -79,7 +82,6 @@
         /// <returns></returns>
         public double GetInsurancePremium() => (CashReceiptsPerYear / NumberOfInsuredPersons) * 1000000 / 12;
         #endregion
-
 
         /// <summary>
         /// Информация об организации в виде строки

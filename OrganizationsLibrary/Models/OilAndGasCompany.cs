@@ -2,10 +2,10 @@
 
 namespace Organizations
 {
-
     /// <summary>
     /// Нефтегазовая компания
     /// </summary>
+    [Serializable]
     public class OilAndGasCompany : Organization
     {
         #region Конструктор
