@@ -85,11 +85,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Additem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Show.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AdditemViewModel.cs" />
     <Compile Include="Models\BaseViewModel.cs" />
     <Compile Include="Models\MainViewModel.cs" />
-    <Compile Include="Models\SearchModel.cs" />
+    <Compile Include="Models\ShowViewModel.cs" />
+    <Compile Include="Pages\Additem.xaml.cs">
+      <DependentUpon>Additem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Show.xaml.cs">
+      <DependentUpon>Show.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

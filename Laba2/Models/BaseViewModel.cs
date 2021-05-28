@@ -27,6 +27,16 @@ namespace Laba2.Models
             }
         }
 
+        public static async void XmlToList()
+        {
+            Organizations = await XmlLoadAsync(Path);
+        }
+
+        public static async void ListToXml()
+        {
+            await XmlSaveAsync(Path, Organizations);
+        }
+
         /// <summary>
         /// Сериализация
         /// </summary>

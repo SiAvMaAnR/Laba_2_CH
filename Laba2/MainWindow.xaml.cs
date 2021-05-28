@@ -33,8 +33,8 @@ namespace Laba2
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MainViewModel.XmlToList();
-            MainViewModel.ListToCollections();
+            //MainViewModel.XmlToList();
+            //MainViewModel.ListToCollections();
         }
     }
 }
