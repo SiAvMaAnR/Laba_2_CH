@@ -46,6 +46,9 @@ namespace Laba2.Models
             InsuranceCompanies = new ObservableCollection<InsuranceCompany>();
             OilAndGasCompanies = new ObservableCollection<OilAndGasCompany>();
             Factories = new ObservableCollection<Factory>();
+
+
+            InsuranceCompanies.Add(new InsuranceCompany(2,2,"fdg",3,4,5));
         }
 
         private static async void XmlToList()
