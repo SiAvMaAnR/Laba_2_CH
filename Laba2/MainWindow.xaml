@@ -5,8 +5,112 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBox" x:Key="TextBox">
+            <Style.Setters>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style.Setters>
+            <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="14"/>
+            </Style>
+        </Style.Resources>
+        </Style>
+
+        <Style TargetType="Button" x:Key="Button">
+            <Style.Setters>
+                <Setter Property="Margin" Value="15,10,15,10"/>
+                <Setter Property="FontSize" Value="22"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="BorderThickness" Value="2"/>
+            </Style.Setters>
+
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style TargetType="TabItem" x:Key="TabItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Black" CornerRadius="4,4,0,0" Margin="4,0">
+                            <Label FontSize="14"  x:Name="label" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">
+                                <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Stretch"  
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header" Margin="5,1,5,1"
+                                        RecognizesAccessKey="True"/>       
+                            </Label>
+                        </Border>
+                        
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*" MaxHeight="80"/>
+            <RowDefinition Height="85*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <TextBox VerticalContentAlignment="Center" Text="{Binding TextSearch}" Style="{StaticResource TextBox}"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Button Content="Поиск" Style="{StaticResource Button}"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <TabControl BorderBrush="Transparent">
+               
+                <TabItem MinWidth="200" Header="Страховая компания" Style="{StaticResource TabItem}">
+                    <DataGrid>
+
+                    </DataGrid>
+                </TabItem>
+
+                <TabItem MinWidth="200" Header="Нефтегазовая компания" Style="{StaticResource TabItem}">
+                    <DataGrid>
+
+                    </DataGrid>
+                </TabItem>
+
+                <TabItem MinWidth="200" Header="Завод" Style="{StaticResource TabItem}">
+                    <DataGrid>
+                        
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>

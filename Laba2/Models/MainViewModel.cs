@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Laba2.Models
 {
-    class MainViewModel
+    public class MainViewModel:BaseViewModel
     {
+
+        public MainViewModel()
+        {
+
+        }
     }
 }
