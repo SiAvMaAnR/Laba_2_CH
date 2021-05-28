@@ -8,6 +8,58 @@ namespace Organizations
     [Serializable]
     public class OilAndGasCompany : Organization
     {
+
+        #region Поля и Свойства
+        /// <summary>
+        /// Производит N кубометров газа в минуту
+        /// </summary>
+        private double cubicMetersOfGasPerMinute;
+        public double CubicMetersOfGasPerMinute 
+        {
+            get
+            {
+                return cubicMetersOfGasPerMinute;
+            }
+            set 
+            {
+                cubicMetersOfGasPerMinute = value;
+            }
+        }
+
+        /// <summary>
+        /// Количество скважин
+        /// </summary>
+        private int numberOfWells;
+        public int NumberOfWells
+        {
+            get
+            {
+                return numberOfWells;
+            }
+            set
+            {
+                numberOfWells = value;
+            }
+        }
+
+        /// <summary>
+        /// Стоимость оборудования (в миллионах)
+        /// </summary>
+        private double costOfEquipment;
+        public double CostOfEquipment
+        {
+            get
+            {
+                return costOfEquipment;
+            }
+            set
+            {
+                costOfEquipment = value;
+            }
+        }
+        #endregion
+
+
         #region Конструктор
         /// <summary>
         /// Нефтегазовая компания
@@ -19,12 +71,15 @@ namespace Organizations
         /// <param name="numberOfWells">Кол-во скважин</param>
         /// <param name="costOfEquipment">Стоимость оборудования (в млн.)</param>
         public OilAndGasCompany(int numberOfEmployees, double income, string leader,
-                                double cubicMetersOfGasPerMinute, int numberOfWells, double costOfEquipment) :
-                                base(numberOfEmployees, income, leader)
+                                double cubicMetersOfGasPerMinute, int numberOfWells, double costOfEquipment) 
         {
-            CubicMetersOfGasPerMinute = cubicMetersOfGasPerMinute;
-            NumberOfWells = numberOfWells;
-            CostOfEquipment = costOfEquipment;
+            this.NumberOfEmployees = numberOfEmployees;
+            this.Income = income;
+            this.Leader = leader;
+
+            this.CubicMetersOfGasPerMinute = cubicMetersOfGasPerMinute;
+            this.NumberOfWells = numberOfWells;
+            this.CostOfEquipment = costOfEquipment;
         }
 
 
@@ -38,22 +93,7 @@ namespace Organizations
         const double RussiaGasConsumptionPerMinute = 857060.19;
         #endregion
 
-        #region Свойства
-        /// <summary>
-        /// Производит N кубометров газа в минуту
-        /// </summary>
-        public double CubicMetersOfGasPerMinute { get; set; }
-
-        /// <summary>
-        /// Количество скважин
-        /// </summary>
-        public int NumberOfWells { get; set; }
-
-        /// <summary>
-        /// Стоимость оборудования (в миллионах)
-        /// </summary>
-        public double CostOfEquipment { get; set; }
-        #endregion
+        
 
         #region Методы
 

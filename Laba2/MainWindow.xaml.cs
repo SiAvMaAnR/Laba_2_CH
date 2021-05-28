@@ -29,8 +29,14 @@ namespace Laba2
             InitializeComponent();
             this.DataContext = MainModel;
             Closing += MainModel.OnWindowClosing;
+
+            xInsuranceCompanies.ItemsSource = MainViewModel.InsuranceCompanies;
         }
 
-        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.XmlToList();
+            MainViewModel.ListToCollections();
+        }
     }
 }

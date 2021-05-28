@@ -8,6 +8,48 @@ namespace Organizations
     [Serializable]
     public class InsuranceCompany : Organization
     {
+        #region Поля и Свойства
+
+        /// <summary>
+        /// Сумма страховых выплат в год (в млн.р.)
+        /// </summary>
+        /// <returns>Млн. рублей</returns>
+        private double amountOfInsurancePaymentsPerYear;
+        public double AmountOfInsurancePaymentsPerYear
+        {
+            get { return amountOfInsurancePaymentsPerYear; }
+            set { amountOfInsurancePaymentsPerYear = value; }
+        }
+
+        /// <summary>
+        /// Сумма денежных поступлений в год (в млн.р.)
+        /// </summary>
+        /// <returns>Млн. рублей</returns>
+        private double cashReceiptsPerYear;
+        public double CashReceiptsPerYear 
+        {
+            get { return cashReceiptsPerYear; }
+            set { cashReceiptsPerYear = value; }
+        }
+
+        /// <summary>
+        /// Число застрахованных лиц
+        /// </summary>
+        private int numberOfInsuredPersons;
+        public int NumberOfInsuredPersons
+        {
+            get
+            {
+                return numberOfInsuredPersons;
+            }
+            set
+            {
+                numberOfInsuredPersons = value;
+             }
+        }
+
+        #endregion
+
         #region Конструктор
         /// <summary>
         /// Страховая компания
@@ -19,39 +61,18 @@ namespace Organizations
         /// <param name="cashReceiptsPerYear">Сумма денежных поступлений (млн.р)</param>
         /// <param name="numberOfInsuredPersons">Застрахованных лиц</param>
         public InsuranceCompany(int numberOfEmployees, double income, string leader,
-            double amountOfInsurancePaymentsPerYear, double cashReceiptsPerYear, int numberOfInsuredPersons) :
-            base(numberOfEmployees, income, leader)
+            double amountOfInsurancePaymentsPerYear, double cashReceiptsPerYear, int numberOfInsuredPersons)
         {
-            AmountOfInsurancePaymentsPerYear = amountOfInsurancePaymentsPerYear;
-            CashReceiptsPerYear = cashReceiptsPerYear;
-            NumberOfInsuredPersons = numberOfInsuredPersons;
+            this.NumberOfEmployees = numberOfEmployees;
+            this.Income = income;
+            this.Leader = leader;
+
+            this.AmountOfInsurancePaymentsPerYear = amountOfInsurancePaymentsPerYear;
+            this.CashReceiptsPerYear = cashReceiptsPerYear;
+            this.NumberOfInsuredPersons = numberOfInsuredPersons;
         }
 
-        public InsuranceCompany()
-        {
-           
-        }
-        #endregion
-
-        #region Свойства
-
-        /// <summary>
-        /// Сумма страховых выплат в год (в млн.р.)
-        /// </summary>
-        /// <returns>Млн. рублей</returns>
-        public double AmountOfInsurancePaymentsPerYear { get; set; }
-
-        /// <summary>
-        /// Сумма денежных поступлений в год (в млн.р.)
-        /// </summary>
-        /// <returns>Млн. рублей</returns>
-        public double CashReceiptsPerYear { get; set; }
-
-        /// <summary>
-        /// Число застрахованных лиц
-        /// </summary>
-        public int NumberOfInsuredPersons { get; set; }
-
+        public InsuranceCompany() { }
         #endregion
 
         #region Методы

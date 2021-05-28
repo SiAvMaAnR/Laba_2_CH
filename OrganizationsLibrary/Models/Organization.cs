@@ -12,6 +12,39 @@ namespace Organizations
     [XmlInclude(typeof(OilAndGasCompany))]
     public abstract class Organization
     {
+
+        #region Поля и Свойства
+        /// <summary>
+        /// Число сотрудников
+        /// </summary>
+        private int numberOfEmployees;
+        public int NumberOfEmployees
+        {
+            get => numberOfEmployees;
+            set => numberOfEmployees = value;
+        }
+
+        /// <summary>
+        /// Прибыль млн.р. в год
+        /// </summary>
+        private double income;
+        public double Income
+        {
+            get => income;
+            set => income = value;
+        }
+
+        /// <summary>
+        /// Лидер организации
+        /// </summary>
+        private string leader;
+        public string Leader
+        {
+            get => leader;
+            set => leader = value;
+        }
+        #endregion
+
         #region Конструктор
         /// <summary>
         /// Организация
@@ -19,31 +52,13 @@ namespace Organizations
         /// <param name="numberOfEmployees">Количество сотрудников</param>
         /// <param name="income">Прибыль</param>
         /// <param name="leader">Лидер организации</param>
-        public Organization(int numberOfEmployees, double income, string leader)
-        {
-            NumberOfEmployees = numberOfEmployees;
-            Income = income;
-            Leader = leader;
-        }
+        //public Organization(int numberOfEmployees, double income, string leader)
+        //{
+        //    this.NumberOfEmployees = numberOfEmployees;
+        //    this.Income = income;
+        //    this.Leader = leader;
+        //}
         public Organization() { }
-        #endregion
-
-        #region Свойства
-        /// <summary>
-        /// Число сотрудников
-        /// </summary>
-        public int NumberOfEmployees { get; set; }
-
-        /// <summary>
-        /// Прибыль млн.р. в год
-        /// </summary>
-        public double Income { get; set; }
-
-        /// <summary>
-        /// Лидер организации
-        /// </summary>
-        public string Leader { get; set; }
-
         #endregion
 
         #region Методы

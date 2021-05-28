@@ -6,13 +6,13 @@
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:local="clr-namespace:Laba2"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800">
+        Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800" Loaded="Window_Loaded">
 
-    <i:Interaction.Triggers>
+    <!--<i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
         </i:EventTrigger>
-    </i:Interaction.Triggers>
+    </i:Interaction.Triggers>-->
 
     <Window.Resources>
         <Style TargetType="TextBox" x:Key="TextBox">
@@ -99,10 +99,10 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TabControl BorderBrush="Transparent">
+            <TabControl>
                
                 <TabItem MinWidth="195" Header="Страховая компания" Style="{StaticResource TabItem}">
-                    <DataGrid CanUserAddRows="True" ItemsSource="{Binding InsuranceCompanies}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
+                    <DataGrid x:Name="xInsuranceCompanies" ItemsSource="{Binding InsuranceCompanies}" CanUserAddRows="True"  Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False"  FontSize="16" >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
                                 <Setter Property="FontSize" Value="14"/>
@@ -121,7 +121,7 @@
                 </TabItem>
 
                 <TabItem MinWidth="195" Header="Нефтегазовая компания" Style="{StaticResource TabItem}">
-                    <DataGrid CanUserAddRows="True" ItemsSource="{Binding OilAndGasCompanies}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
+                    <DataGrid x:Name="xOilAndGasCompanies" CanUserAddRows="True" ItemsSource="{Binding OilAndGasCompanies}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False"  FontSize="16" >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
                                 <Setter Property="FontSize" Value="14"/>
@@ -140,7 +140,7 @@
                 </TabItem>
 
                 <TabItem MinWidth="195" Header="Завод" Style="{StaticResource TabItem}">
-                    <DataGrid CanUserAddRows="True" ItemsSource="{Binding Factories}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
+                    <DataGrid x:Name="xFactories" CanUserAddRows="True" ItemsSource="{Binding Factories}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" FontSize="16"  >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
                                 <Setter Property="FontSize" Value="14"/>

@@ -8,6 +8,57 @@ namespace Organizations
     [Serializable]
     public class Factory : Organization
     {
+        #region Поля и Свойства
+        /// <summary>
+        /// Изготавливается тон продукта в год
+        /// </summary>
+        private double tonsOfProductPerYear;
+        public double TonsOfProductPerYear
+        {
+            get
+            {
+                return tonsOfProductPerYear;
+            }
+            set 
+            {
+                tonsOfProductPerYear = value;
+            }
+        }
+
+
+        /// <summary>
+        /// Единиц продукта в год
+        /// </summary>
+        private int productUnitsPerYear;
+        public int ProductUnitsPerYear
+        {
+            get
+            {
+                return productUnitsPerYear;
+            }
+            set
+            {
+                productUnitsPerYear = value;
+            }
+        }
+
+        /// <summary>
+        /// Степень загрязнения окружающей среды
+        /// </summary>
+        private double percentageOfPollution;
+        public double PercentageOfPollution
+        {
+            get { return percentageOfPollution; }
+            set
+            {
+                if (value > 100) percentageOfPollution = 100;
+                else if (value < 0) percentageOfPollution = 0;
+                else percentageOfPollution = value;
+            }
+        }
+        #endregion
+
+
         #region Конструктор
         /// <summary>
         /// Завод
@@ -18,12 +69,15 @@ namespace Organizations
         /// <param name="tonsOfProductPerYear">Тонн продукта в год</param>
         /// <param name="productUnitsPerYear">Единиц продукта в год</param>
         /// <param name="percentageOfPollution">Степень загрязнение окружаюзей среды (0-100%)</param>
-        public Factory(int numberOfEmployees, double income, string leader, double tonsOfProductPerYear, int productUnitsPerYear, double percentageOfPollution) :
-                       base(numberOfEmployees, income, leader)
+        public Factory(int numberOfEmployees, double income, string leader, double tonsOfProductPerYear, int productUnitsPerYear, double percentageOfPollution) 
         {
-            TonsOfProductPerYear = tonsOfProductPerYear;
-            ProductUnitsPerYear = productUnitsPerYear;
-            PercentageOfPollution = percentageOfPollution;
+            this.NumberOfEmployees = numberOfEmployees;
+            this.Income = income;
+            this.Leader = leader;
+
+            this.TonsOfProductPerYear = tonsOfProductPerYear;
+            this.ProductUnitsPerYear = productUnitsPerYear;
+            this.PercentageOfPollution = percentageOfPollution;
         }
 
         public Factory()
@@ -32,37 +86,6 @@ namespace Organizations
         }
         #endregion
 
-        #region Приватные поля
-        private double percentageOfPollution;
-        #endregion
-
-        #region Свойства
-        /// <summary>
-        /// Изготавливается тон продукта в год
-        /// </summary>
-        public double TonsOfProductPerYear { get; set; }
-
-
-        /// <summary>
-        /// Единиц продукта в год
-        /// </summary>
-        public int ProductUnitsPerYear { get; set; }
-
-
-        /// <summary>
-        /// Степень загрязнения окружающей среды
-        /// </summary>
-        public double PercentageOfPollution
-        {
-            get { return percentageOfPollution; }
-            set
-            {
-                if (value > 1) percentageOfPollution = 1;
-                else if (value < 0) percentageOfPollution = 0;
-                else percentageOfPollution = value;
-            }
-        }
-        #endregion
 
         #region Методы
         /// <summary>

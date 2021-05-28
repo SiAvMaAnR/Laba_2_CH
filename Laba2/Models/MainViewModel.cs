@@ -2,6 +2,7 @@
 using Organizations;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -9,25 +10,43 @@ namespace Laba2.Models
 {
     public class MainViewModel : BaseViewModel
     {
-        private static ObservableCollection<InsuranceCompany> insuranceCompanies;
+        private static ObservableCollection<InsuranceCompany> insuranceCompanies=new ObservableCollection<InsuranceCompany>();
         public static ObservableCollection<InsuranceCompany> InsuranceCompanies
         {
-            get => insuranceCompanies;
-            set => insuranceCompanies = value;
+            get
+            {
+                return insuranceCompanies;
+            }
+            set
+            {
+                insuranceCompanies = value;
+            }
         }
 
-        private static ObservableCollection<OilAndGasCompany> oilAndGasCompanies;
+        private static ObservableCollection<OilAndGasCompany> oilAndGasCompanies = new ObservableCollection<OilAndGasCompany>();
         public static ObservableCollection<OilAndGasCompany> OilAndGasCompanies
         {
-            get => oilAndGasCompanies;
-            set => oilAndGasCompanies = value;
+            get
+            {
+                return oilAndGasCompanies;
+            }
+            set
+            {
+                oilAndGasCompanies = value;
+            }
         }
 
-        private static ObservableCollection<Factory> factories;
+        private static ObservableCollection<Factory> factories = new ObservableCollection<Factory>();
         public static ObservableCollection<Factory> Factories
         {
-            get => factories;
-            set => factories = value;
+            get
+            {
+                return factories;
+            }
+            set
+            {
+                factories = value;
+            }
         }
 
         private string textSearch;
@@ -41,34 +60,24 @@ namespace Laba2.Models
             }
         }
 
-        public MainViewModel()
-        {
-            InsuranceCompanies = new ObservableCollection<InsuranceCompany>();
-            OilAndGasCompanies = new ObservableCollection<OilAndGasCompany>();
-            Factories = new ObservableCollection<Factory>();
-
-
-            InsuranceCompanies.Add(new InsuranceCompany(2,2,"fdg",3,4,5));
-        }
-
-        private static async void XmlToList()
+        public static async void XmlToList()
         {
             Organizations = await XmlLoadAsync(Path);
         }
 
-        public ICommand LoadedCommand
-        {
-            get
-            {
-                return new RelayCommand(() =>
-                {
-                    XmlToList();
-                    ListToCollections();
-                });
-            }
-        }
+        //public ICommand LoadedCommand
+        //{
+        //    get
+        //    {
+        //        return new RelayCommand(() =>
+        //        {
+        //            XmlToList();
+        //            ListToCollections();
+        //        });
+        //    }
+        //}
 
-        private static void ListToCollections()
+        public static void ListToCollections()
         {
             InsuranceCompanies.Clear();
             OilAndGasCompanies.Clear();
@@ -82,14 +91,20 @@ namespace Laba2.Models
                 if (item is Factory)
                     Factories.Add((Factory)item);
             }
-            //InsuranceCompanies = new ObservableCollection<InsuranceCompany>(Organizations.Where(x => (x is InsuranceCompany)).Select(x=>(InsuranceCompany)x).ToList());
-            //OilAndGasCompanies = new ObservableCollection<OilAndGasCompany>(Organizations.Where(x => (x is OilAndGasCompany)).Select(x=>(OilAndGasCompany)x).ToList());
-            //Factories = new ObservableCollection<Factory>(Organizations.Where(x => (x is Factory)).Select(x=>(Factory)x).ToList());
+
+            //InsuranceCompanies = new ObservableCollection<InsuranceCompany>(Organizations.Where(x => (x is InsuranceCompany)).Select(x => (InsuranceCompany)x).ToList());
+            //OilAndGasCompanies = new ObservableCollection<OilAndGasCompany>(Organizations.Where(x => (x is OilAndGasCompany)).Select(x => (OilAndGasCompany)x).ToList());
+            //Factories = new ObservableCollection<Factory>(Organizations.Where(x => (x is Factory)).Select(x => (Factory)x).ToList());
+
+            InsuranceCompanies.Add(new InsuranceCompany(2, 2, "fdg", 3, 4, 5));
+            InsuranceCompanies.Add(new InsuranceCompany(2, 2, "fdg", 3, 4, 5));
+            OilAndGasCompanies.Add(new OilAndGasCompany(2, 2, "fdg", 3, 4, 5));
+            Factories.Add(new Factory(2, 2, "fdg", 3, 4, 5));
         }
 
 
 
-        public async void CollectionToList()
+        public static async void CollectionToList()
         {
             await Task.Run(() =>
             {
@@ -101,7 +116,7 @@ namespace Laba2.Models
         }
 
 
-        public async void ListToXml()
+        public static async void ListToXml()
         {
             await XmlSaveAsync(Path, Organizations);
         }

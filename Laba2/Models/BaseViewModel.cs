@@ -1,6 +1,7 @@
 ﻿using Organizations;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -16,8 +17,14 @@ namespace Laba2.Models
         private static List<Organization> organizations = new List<Organization>();
         public static List<Organization> Organizations
         {
-            get => organizations;
-            set => organizations = value;
+            get
+            {
+                return organizations;
+            }
+            set
+            {
+                organizations = value;
+            }
         }
 
         /// <summary>
