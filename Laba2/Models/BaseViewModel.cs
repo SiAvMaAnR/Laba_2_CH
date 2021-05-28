@@ -1,6 +1,7 @@
 ﻿using Organizations;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,39 @@ namespace Laba2.Models
     {
         public static string Path { get; } = @"data.xml";
 
+        private static List<Organization> organizations = new List<Organization>();
+        public static List<Organization> Organizations
+        {
+            get
+            {
+                return organizations;
+            }
+            set
+            {
+                organizations = value;
+            }
+        }
+
+        private static ObservableCollection<InsuranceCompany> insuranceCompanies = new ObservableCollection<InsuranceCompany>();
+        public static ObservableCollection<InsuranceCompany> InsuranceCompanies
+        {
+            get => insuranceCompanies;
+            set => insuranceCompanies = value;
+        }
+
+        private static ObservableCollection<OilAndGasCompany> oilAndGasCompanies = new ObservableCollection<OilAndGasCompany>();
+        public static ObservableCollection<OilAndGasCompany> OilAndGasCompanies
+        {
+            get => oilAndGasCompanies;
+            set => oilAndGasCompanies = value;
+        }
+
+        private static ObservableCollection<Factory> factories = new ObservableCollection<Factory>();
+        public static ObservableCollection<Factory> Factories
+        {
+            get => factories;
+            set => factories = value;
+        }
 
         /// <summary>
         /// Сериализация
