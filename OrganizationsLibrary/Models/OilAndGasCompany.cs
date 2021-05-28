@@ -26,6 +26,12 @@ namespace Organizations
             NumberOfWells = numberOfWells;
             CostOfEquipment = costOfEquipment;
         }
+
+
+        public OilAndGasCompany()
+        {
+
+        }
         #endregion
 
         #region Константы

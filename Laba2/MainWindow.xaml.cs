@@ -21,10 +21,18 @@ namespace Laba2
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
+
+        MainViewModel MainModel = new MainViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
+            Closing += MainModel.OnWindowClosing;
+            this.DataContext = MainModel;
         }
+
+
     }
 }

@@ -93,7 +93,7 @@
         <Grid Grid.Row="1">
             <TabControl BorderBrush="Transparent">
                
-                <TabItem MinWidth="200" Header="Страховая компания" Style="{StaticResource TabItem}">
+                <TabItem MinWidth="195" Header="Страховая компания" Style="{StaticResource TabItem}">
                     <DataGrid ItemsSource="{Binding InsuranceCompanies}" CanUserAddRows="True" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
@@ -112,7 +112,7 @@
                     </DataGrid>
                 </TabItem>
 
-                <TabItem MinWidth="200" Header="Нефтегазовая компания" Style="{StaticResource TabItem}">
+                <TabItem MinWidth="195" Header="Нефтегазовая компания" Style="{StaticResource TabItem}">
                     <DataGrid ItemsSource="{Binding OilAndGasCompanies}" CanUserAddRows="True" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
@@ -131,7 +131,7 @@
                     </DataGrid>
                 </TabItem>
 
-                <TabItem MinWidth="200" Header="Завод" Style="{StaticResource TabItem}">
+                <TabItem MinWidth="195" Header="Завод" Style="{StaticResource TabItem}">
                     <DataGrid ItemsSource="{Binding Factories}" CanUserAddRows="True" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">

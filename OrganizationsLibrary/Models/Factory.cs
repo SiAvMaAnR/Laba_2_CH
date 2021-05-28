@@ -25,6 +25,11 @@ namespace Organizations
             ProductUnitsPerYear = productUnitsPerYear;
             PercentageOfPollution = percentageOfPollution;
         }
+
+        public Factory()
+        {
+
+        }
         #endregion
 
         #region Приватные поля

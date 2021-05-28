@@ -56,13 +56,13 @@ namespace Laba2.Models
         /// <param name="path">Путь</param>
         /// <param name="list">Список</param>
         /// <returns></returns>
-        public async Task<bool> XmlSaveAsync<T>(string path, List<Organization> list)
+        public static async Task<bool> XmlSaveAsync(string path, List<Organization> list)
         {
             return await Task.Run(() =>
             {
                 try
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(T));
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<Organization>));
                     using (FileStream fs = new FileStream(path, FileMode.Create))
                     {
                         serializer.Serialize(fs, list);
@@ -79,7 +79,7 @@ namespace Laba2.Models
         /// <summary>
         /// Десерилизация
         /// </summary>
-        public async Task<List<Organization>> XmlLoadAsync(string path)
+        public static async Task<List<Organization>> XmlLoadAsync(string path)
         {
             return await Task.Run(() =>
             {

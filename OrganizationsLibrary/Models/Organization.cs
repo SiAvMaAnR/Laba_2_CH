@@ -29,7 +29,10 @@ namespace Organizations
             Income = income;
             Leader = leader;
         }
+        public Organization()
+        {
 
+        }
         #endregion
 
         #region Свойства

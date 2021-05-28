@@ -26,6 +26,11 @@ namespace Organizations
             CashReceiptsPerYear = cashReceiptsPerYear;
             NumberOfInsuredPersons = numberOfInsuredPersons;
         }
+
+        public InsuranceCompany()
+        {
+           
+        }
         #endregion
 
         #region Свойства
