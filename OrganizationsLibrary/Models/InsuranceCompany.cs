@@ -45,7 +45,7 @@ namespace Organizations
             set
             {
                 numberOfInsuredPersons = value;
-             }
+            }
         }
 
         #endregion
@@ -60,8 +60,7 @@ namespace Organizations
         /// <param name="amountOfInsurancePaymentsPerYear">Сумма страховых выплат (млн.р)</param>
         /// <param name="cashReceiptsPerYear">Сумма денежных поступлений (млн.р)</param>
         /// <param name="numberOfInsuredPersons">Застрахованных лиц</param>
-        public InsuranceCompany(int numberOfEmployees, double income, string leader,
-            double amountOfInsurancePaymentsPerYear, double cashReceiptsPerYear, int numberOfInsuredPersons)
+        public InsuranceCompany(int numberOfEmployees, double income, string leader, double amountOfInsurancePaymentsPerYear, double cashReceiptsPerYear, int numberOfInsuredPersons)
         {
             this.NumberOfEmployees = numberOfEmployees;
             this.Income = income;

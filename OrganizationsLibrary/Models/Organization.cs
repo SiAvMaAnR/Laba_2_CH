@@ -20,8 +20,8 @@ namespace Organizations
         private int numberOfEmployees;
         public int NumberOfEmployees
         {
-            get => numberOfEmployees;
-            set => numberOfEmployees = value;
+            get { return numberOfEmployees; }
+            set { numberOfEmployees = value; }
         }
 
         /// <summary>
@@ -30,8 +30,8 @@ namespace Organizations
         private double income;
         public double Income
         {
-            get => income;
-            set => income = value;
+            get { return income; }
+            set { income = value; }
         }
 
         /// <summary>
@@ -40,8 +40,8 @@ namespace Organizations
         private string leader;
         public string Leader
         {
-            get => leader;
-            set => leader = value;
+            get { return leader; }
+            set { leader = value; }
         }
         #endregion
 

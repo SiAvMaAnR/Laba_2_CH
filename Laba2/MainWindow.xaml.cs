@@ -22,15 +22,13 @@ namespace Laba2
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainViewModel MainModel = new MainViewModel();
+        public MainViewModel MainModel = new MainViewModel();
 
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = MainModel;
             Closing += MainModel.OnWindowClosing;
-
-            xInsuranceCompanies.ItemsSource = MainViewModel.InsuranceCompanies;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

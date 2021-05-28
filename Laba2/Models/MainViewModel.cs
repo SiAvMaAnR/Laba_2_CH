@@ -65,18 +65,6 @@ namespace Laba2.Models
             Organizations = await XmlLoadAsync(Path);
         }
 
-        //public ICommand LoadedCommand
-        //{
-        //    get
-        //    {
-        //        return new RelayCommand(() =>
-        //        {
-        //            XmlToList();
-        //            ListToCollections();
-        //        });
-        //    }
-        //}
-
         public static void ListToCollections()
         {
             InsuranceCompanies.Clear();

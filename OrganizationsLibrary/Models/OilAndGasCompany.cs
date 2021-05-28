@@ -8,7 +8,6 @@ namespace Organizations
     [Serializable]
     public class OilAndGasCompany : Organization
     {
-
         #region Поля и Свойства
         /// <summary>
         /// Производит N кубометров газа в минуту
@@ -61,6 +60,7 @@ namespace Organizations
 
 
         #region Конструктор
+
         /// <summary>
         /// Нефтегазовая компания
         /// </summary>
@@ -70,8 +70,7 @@ namespace Organizations
         /// <param name="cubicMetersOfGasPerMinute">Производит куб.м. газа в минуту</param>
         /// <param name="numberOfWells">Кол-во скважин</param>
         /// <param name="costOfEquipment">Стоимость оборудования (в млн.)</param>
-        public OilAndGasCompany(int numberOfEmployees, double income, string leader,
-                                double cubicMetersOfGasPerMinute, int numberOfWells, double costOfEquipment) 
+        public OilAndGasCompany(int numberOfEmployees, double income, string leader, double cubicMetersOfGasPerMinute, int numberOfWells, double costOfEquipment)
         {
             this.NumberOfEmployees = numberOfEmployees;
             this.Income = income;
@@ -82,8 +81,8 @@ namespace Organizations
             this.CostOfEquipment = costOfEquipment;
         }
 
-
         public OilAndGasCompany() { }
+
         #endregion
 
         #region Константы
