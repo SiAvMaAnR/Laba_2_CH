@@ -3,9 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:local="clr-namespace:Laba2"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
     <Window.Resources>
         <Style TargetType="TextBox" x:Key="TextBox">
             <Style.Setters>
@@ -94,7 +102,7 @@
             <TabControl BorderBrush="Transparent">
                
                 <TabItem MinWidth="195" Header="Страховая компания" Style="{StaticResource TabItem}">
-                    <DataGrid ItemsSource="{Binding InsuranceCompanies}" CanUserAddRows="True" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
+                    <DataGrid CanUserAddRows="True" ItemsSource="{Binding InsuranceCompanies}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
                                 <Setter Property="FontSize" Value="14"/>
@@ -113,7 +121,7 @@
                 </TabItem>
 
                 <TabItem MinWidth="195" Header="Нефтегазовая компания" Style="{StaticResource TabItem}">
-                    <DataGrid ItemsSource="{Binding OilAndGasCompanies}" CanUserAddRows="True" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
+                    <DataGrid CanUserAddRows="True" ItemsSource="{Binding OilAndGasCompanies}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
                                 <Setter Property="FontSize" Value="14"/>
@@ -132,7 +140,7 @@
                 </TabItem>
 
                 <TabItem MinWidth="195" Header="Завод" Style="{StaticResource TabItem}">
-                    <DataGrid ItemsSource="{Binding Factories}" CanUserAddRows="True" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
+                    <DataGrid CanUserAddRows="True" ItemsSource="{Binding Factories}" Margin="3,0,0,0"  Background="{x:Null}" BorderThickness="1" AutoGenerateColumns="False" BorderBrush="Black" FontSize="16"  >
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="DataGridColumnHeader">
                                 <Setter Property="FontSize" Value="14"/>
@@ -142,7 +150,7 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfEmployees}" Header="Название"/>
                             <DataGridTextColumn Width="*" Binding="{Binding Path=Income}" Header="Масса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="Скорость"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="haha"/>
                             <DataGridTextColumn Width="*" Binding="{Binding Path=TonsOfProductPerYear}" Header="Материал паруса" />
                             <DataGridTextColumn Width="*" Binding="{Binding Path=ProductUnitsPerYear}" Header="Площадь паруса" />
                             <DataGridTextColumn Width="*" Binding="{Binding Path=PercentageOfPollution}" Header="Площадь паруса" />

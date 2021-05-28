@@ -1,4 +1,5 @@
-﻿using Laba2.Models;
+﻿using GalaSoft.MvvmLight.Command;
+using Laba2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,18 +22,15 @@ namespace Laba2
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-
-
         MainViewModel MainModel = new MainViewModel();
 
         public MainWindow()
         {
             InitializeComponent();
-            Closing += MainModel.OnWindowClosing;
             this.DataContext = MainModel;
+            Closing += MainModel.OnWindowClosing;
         }
 
-
+        
     }
 }

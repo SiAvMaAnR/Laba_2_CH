@@ -1,14 +1,9 @@
 ﻿using Organizations;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Laba2.Models
 {
-    class SearchModel:BaseViewModel
+    class SearchModel : BaseViewModel
     {
         private static ObservableCollection<InsuranceCompany> searchInsuranceCompanies = new ObservableCollection<InsuranceCompany>();
         public static ObservableCollection<InsuranceCompany> SearchInsuranceCompanies

@@ -28,10 +28,7 @@ namespace Organizations
         }
 
 
-        public OilAndGasCompany()
-        {
-
-        }
+        public OilAndGasCompany() { }
         #endregion
 
         #region Константы
@@ -86,7 +83,7 @@ namespace Organizations
         /// </summary>
         /// <returns></returns>
         public override string ToString() => base.ToString() + $"Производит газ: {CubicMetersOfGasPerMinute} куб.м./мин.\nКоличество скважин: {NumberOfWells} ед.\nСтоимость оборудования: {CostOfEquipment} млн.р.";
-        
+
         public override bool IsContains(string text)
         {
             text = text.ToUpper();
@@ -95,7 +92,7 @@ namespace Organizations
                 || Leader.Contains(text)
                 || CubicMetersOfGasPerMinute.ToString().Contains(text)
                 || NumberOfWells.ToString().Contains(text)
-                || CostOfEquipment.ToString().Contains(text)); 
+                || CostOfEquipment.ToString().Contains(text));
         }
     }
 }

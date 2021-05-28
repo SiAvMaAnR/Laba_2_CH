@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Organizations
@@ -29,10 +25,7 @@ namespace Organizations
             Income = income;
             Leader = leader;
         }
-        public Organization()
-        {
-
-        }
+        public Organization() { }
         #endregion
 
         #region Свойства
@@ -59,16 +52,16 @@ namespace Organizations
         /// </summary>
         /// <returns>Млн.р</returns>
         public double ProfitPerEmployee() => Income / ((double)NumberOfEmployees);
-        
-        
+
+
         /// <summary>
         /// Прибыль за заданное время
         /// </summary>
         /// <param name="time">Время</param>
         /// <returns>Млн.р</returns>
         public double ProfitForTime(TimeSpan time) => Income * (time.TotalSeconds / TimeSpan.FromDays(365).TotalSeconds);
-        
-        
+
+
         /// <summary>
         /// Время которое понадобится на получение этой суммы организацией
         /// </summary>
@@ -83,7 +76,7 @@ namespace Organizations
         /// </summary>
         /// <returns></returns>
         public override string ToString() => $"Число сотрудников: {NumberOfEmployees} чел.\nПрибыль: {Income} млн.р.\nЛидер: {Leader}";
-        
+
         /// <summary>
         /// Содержат ли свойства объекта заданную строку
         /// </summary>
