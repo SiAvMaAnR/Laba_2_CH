@@ -52,12 +52,12 @@ namespace Organizations
         /// <param name="numberOfEmployees">Количество сотрудников</param>
         /// <param name="income">Прибыль</param>
         /// <param name="leader">Лидер организации</param>
-        //public Organization(int numberOfEmployees, double income, string leader)
-        //{
-        //    this.NumberOfEmployees = numberOfEmployees;
-        //    this.Income = income;
-        //    this.Leader = leader;
-        //}
+        public Organization(int numberOfEmployees, double income, string leader)
+        {
+            this.NumberOfEmployees = numberOfEmployees;
+            this.Income = income;
+            this.Leader = leader;
+        }
         public Organization() { }
         #endregion
 
