@@ -104,12 +104,12 @@
                             </Style>
                         </DataGrid.ColumnHeaderStyle>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfEmployees}" Header="Название"/>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=Income}" Header="Масса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="Скорость"/>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=AmountOfInsurancePaymentsPerYear}" Header="Материал паруса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=CashReceiptsPerYear}" Header="Площадь паруса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfInsuredPersons}" Header="Площадь паруса" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfEmployees}" Header="Число сотрудников"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=Income}" Header="Ед. продукта в год" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="Лидер организации"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=AmountOfInsurancePaymentsPerYear}" Header="Сумма выплат" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=CashReceiptsPerYear}" Header="Сумма поступлений" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfInsuredPersons}" Header="Число застрахованных" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
@@ -123,12 +123,12 @@
                             </Style>
                         </DataGrid.ColumnHeaderStyle>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfEmployees}" Header="Название"/>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=Income}" Header="Масса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="Скорость"/>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=CubicMetersOfGasPerMinute}" Header="Материал паруса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfWells}" Header="Площадь паруса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=CostOfEquipment}" Header="Площадь паруса" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfEmployees}" Header="Число сотрудников"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=Income}" Header="Ед. продукта в год" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="Лидер организации"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=CubicMetersOfGasPerMinute}" Header="Количество газа" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfWells}" Header="Количество скважин" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=CostOfEquipment}" Header="Стоимость оборудования" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
@@ -142,12 +142,12 @@
                             </Style>
                         </DataGrid.ColumnHeaderStyle>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfEmployees}" Header="Название"/>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=Income}" Header="Масса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="haha"/>
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=TonsOfProductPerYear}" Header="Материал паруса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=ProductUnitsPerYear}" Header="Площадь паруса" />
-                            <DataGridTextColumn Width="*" Binding="{Binding Path=PercentageOfPollution}" Header="Площадь паруса" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=NumberOfEmployees}" Header="Число сотрудников"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=Income}" Header="Ед. продукта в год" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=Leader}" Header="Лидер организации"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=TonsOfProductPerYear}" Header="Изготовление продукта" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=ProductUnitsPerYear}" Header="Ед. продукта в год" />
+                            <DataGridTextColumn Width="*" Binding="{Binding Path=PercentageOfPollution}" Header="Степень загрязнения" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>

@@ -7,8 +7,91 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Additem">
-
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="FuncButton">
+            <Setter Property="Margin" Value="40,10,40,10"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Page.Resources>
     <Grid>
-        
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Row="0" Grid.Column="0">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Выберите организацию" TextAlignment="Center"></TextBlock>
+                    <ComboBox x:Name="SI" SelectedItem="{Binding Path=SelectIndex}" FontSize="20" Text="Organizations" Margin="50,0,50,0"  Height="40"  VerticalAlignment="Stretch">
+                        <TextBlock>Страховая компания</TextBlock>
+                        <TextBlock>Нефтегазовая компания</TextBlock>
+                        <TextBlock>Завод</TextBlock>
+                    </ComboBox>
+                </StackPanel>
+                
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Выберите организацию" TextAlignment="Center"></TextBlock>
+                    <Button FontSize="20" Content="Добавить" Height="40" Margin="50,0,50,0"/>
+                </StackPanel>
+            </Grid>
+            
+            <Grid Grid.Row="1" Grid.Column="0">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Число сотрудников" TextAlignment="Center"></TextBlock>
+                    <TextBox HorizontalContentAlignment="Center" FontSize="20" Height="40" Margin="50,0,50,0"/>
+                </StackPanel>
+            </Grid>
+            
+            <Grid Grid.Row="1" Grid.Column="1">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Ед. продукта в год" TextAlignment="Center"></TextBlock>
+                    <TextBox HorizontalContentAlignment="Center" FontSize="20" Height="40" Margin="50,0,50,0"/>
+                </StackPanel>
+            </Grid>
+            
+            <Grid Grid.Row="2" Grid.Column="0">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Лидер организации" TextAlignment="Center"></TextBlock>
+                    <TextBox HorizontalContentAlignment="Center" FontSize="20" Height="40" Margin="50,0,50,0"/>
+                </StackPanel>
+            </Grid>
+            
+            <Grid Grid.Row="2" Grid.Column="1">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Выберите организацию" TextAlignment="Center"></TextBlock>
+                    <TextBox HorizontalContentAlignment="Center" FontSize="20" Height="40" Margin="50,0,50,0"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="0">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Выберите организацию" TextAlignment="Center"></TextBlock>
+                    <TextBox HorizontalContentAlignment="Center" FontSize="20" Height="40" Margin="50,0,50,0"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="1">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock FontSize="20" Text="Выберите организацию" TextAlignment="Center"></TextBlock>
+                    <TextBox HorizontalContentAlignment="Center" FontSize="20" Height="40" Margin="50,0,50,0"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

@@ -8,5 +8,13 @@ namespace Laba2.Models
 {
     class AdditemViewModel:BaseViewModel
     {
+        private int selectIndex;
+        public int SelectIndex
+        {
+            get { return selectIndex; }
+            set { selectIndex = value; }
+        }
+
+
     }
 }

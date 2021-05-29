@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laba2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Laba2.Pages
         public Additem()
         {
             InitializeComponent();
+            DataContext = new AdditemViewModel();
         }
     }
 }
