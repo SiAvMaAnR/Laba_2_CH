@@ -61,7 +61,10 @@ namespace Laba2.Models
             }
         }
 
-        
+        public ShowViewModel()
+        {
+            ListToCollections();
+        }
 
         public static void ListToCollections()
         {
@@ -82,10 +85,10 @@ namespace Laba2.Models
             //OilAndGasCompanies = new ObservableCollection<OilAndGasCompany>(Organizations.Where(x => (x is OilAndGasCompany)).Select(x => (OilAndGasCompany)x).ToList());
             //Factories = new ObservableCollection<Factory>(Organizations.Where(x => (x is Factory)).Select(x => (Factory)x).ToList());
 
-            //InsuranceCompanies.Add(new InsuranceCompany(2, 2, "fdg", 3, 4, 5));
-            //InsuranceCompanies.Add(new InsuranceCompany(2, 2, "fdg", 3, 4, 5));
-            //OilAndGasCompanies.Add(new OilAndGasCompany(2, 2, "fdg", 3, 4, 5));
-            //Factories.Add(new Factory(2, 2, "fdg", 3, 4, 5));
+            InsuranceCompanies.Add(new InsuranceCompany(2, 2, "fdg", 3, 4, 5));
+            InsuranceCompanies.Add(new InsuranceCompany(2, 2, "fdg", 3, 4, 5));
+            OilAndGasCompanies.Add(new OilAndGasCompany(2, 2, "fdg", 3, 4, 5));
+            Factories.Add(new Factory(2, 2, "fdg", 3, 4, 5));
         }
 
         public static async void CollectionToList()

@@ -35,6 +35,7 @@ namespace Laba2.Models
             Addition = new Pages.Additem();
 
             FramePage = Show;
+
         }
 
         public ICommand Show_Click
